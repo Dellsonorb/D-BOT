@@ -1,0 +1,71 @@
+graph TB
+    subgraph PC["Linux PC 端"]
+        MIC["🎤 麦克风<br/>音频输入"]
+        SPK["🔊 扬声器<br/>音频输出"]
+
+        subgraph Xiaozhi["py-xiaozhi"]
+            APP["Application<br/>设备状态机<br/>IDLE / LISTENING / SPEAKING"]
+            PROTO["Protocol 层<br/>WebSocket / MQTT"]
+            AUDIO["Audio Plugin<br/>音频采集与播放"]
+            WAKE["WakeWord Plugin<br/>语音唤醒<br/>Sherpa-ONNX"]
+            IOT_PLUG["IoT Plugin<br/>设备描述符/状态管理"]
+            UI["UI Plugin<br/>GUI 渲染"]
+            MCP["MCP Plugin<br/>工具调用"]
+        end
+
+        subgraph ThingLayer["IoT Thing 层"]
+            TM["ThingManager<br/>设备注册与路由"]
+            DBOT_THING["DBotThing<br/>18 属性 + 16+ 方法<br/>动作组合 / 高层语义"]
+            DBOT_CLI["DBotClient<br/>UDP 通信<br/>ACK 异步等待"]
+        end
+
+        subgraph GUI["PyQt5 GUI"]
+            MAIN_WIN["主窗口<br/>语音状态 / 表情"]
+            DBOT_PANEL["D-BOT 控制面板<br/>状态显示 / 手动控制<br/>ACK 实时刷新"]
+        end
+
+        MIC --> AUDIO
+        AUDIO --> APP
+        APP --> PROTO
+        APP --> WAKE
+        APP --> IOT_PLUG
+        APP --> UI
+        APP --> MCP
+
+        IOT_PLUG --> TM
+        TM --> DBOT_THING
+        DBOT_THING --> DBOT_CLI
+        DBOT_CLI -->|"UDP JSON<br/>port 6090"| NET_OUT["网络输出"]
+        NET_IN["网络输入<br/>port 16090"] -->|ACK 回执| DBOT_CLI
+
+        UI --> MAIN_WIN
+        UI --> DBOT_PANEL
+        DBOT_THING -.->|状态查询| DBOT_PANEL
+
+        PROTO -->|"WebSocket<br/>wss://api.tenclass.net"| CLOUD["小智云端<br/>语音识别 + AI 对话"]
+        CLOUD -->|IoT 指令| PROTO
+    end
+
+    NET_OUT -->|"WiFi / UDP"| DBOT_HW
+    DBOT_HW -->|"WiFi / UDP ACK"| NET_IN
+
+    subgraph DBOT_HW["D-BOT 机器人 (ESP32-S3)"]
+        UDP["UDPComm<br/>port 6090"]
+        BOT["DBot 核心<br/>命令队列<br/>PID 控制"]
+        MOTORS["SimpleFOC<br/>无刷电机驱动"]
+        IMU["IMU 传感器<br/>MPU6050 / BMI270"]
+        ENC["编码器"]
+        LCD["GC9A01 LCD<br/>圆形显示屏"]
+
+        UDP --> BOT
+        BOT --> MOTORS
+        IMU --> BOT
+        ENC --> BOT
+        BOT --> LCD
+    end
+
+    style PC fill:#e3f2fd,stroke:#1565c0
+    style Xiaozhi fill:#f3e5f5,stroke:#7b1fa2
+    style ThingLayer fill:#fff3e0,stroke:#e65100
+    style GUI fill:#e8f5e9,stroke:#2e7d32
+    style DBOT_HW fill:#fce4ec,stroke:#c62828

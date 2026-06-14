@@ -1,0 +1,204 @@
+(py-xiaozhi) doer@doerLinux:~/Project/py-xiaozhi-main$ sudo chmod 666 /dev/ttyACM0
+(py-xiaozhi) doer@doerLinux:~/Project/py-xiaozhi-main$ python -m serial.tools.miniterm /dev/ttyACM0 115200
+--- Miniterm on /dev/ttyACM0  115200,8,N,1 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+[  4908][E][esp32-hal-cpu.c:110] addApbChangeCallback(): duplicaE (926951) rmt: RMT translator buffer create fail
+E (926952) rmt: rmt_write_sample(1263): RMT translator not init
+[935938][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 200 - BEACON_TIMEOUT
+[939333][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[942723][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[946115][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[949506][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[952901][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[956290][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[959700][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[963089][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[966478][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[969867][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[973258][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[976649][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[980040][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[983431][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[986822][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[990212][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[993604][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[996998][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1000388][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1003778][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1007168][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1010559][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1013948][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1017337][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1020729][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1024120][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1027514][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1030908][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1034299][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1037688][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1041077][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1044465][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1047853][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1047620) rmt: RMT translator buffer create fail
+E (1047620) rmt: rmt_write_sample(1263): RMT translator not init
+E (1048570) rmt: RMT translator buffer create fail
+E (1048570) rmt: rmt_write_sample(1263): RMT translator not init
+E (1049970) rmt: RMT translator buffer create fail
+E (1049970) rmt: rmt_write_sample(1263): RMT translator not init
+E (1050020) rmt: RMT translator buffer create fail
+E (1050020) rmt: rmt_write_sample(1263): RMT translator not init
+E (1050370) rmt: RMT translator buffer create fail
+E (1050370) rmt: rmt_write_sample(1263): RMT translator not init
+[1051245][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1050770) rmt: RMT translator buffer create fail
+E (1050772) rmt: rmt_write_sample(1263): RMT translator not init
+E (1051372) rmt: RMT translator buffer create fail
+E (1051372) rmt: rmt_write_sample(1263): RMT translator not init
+E (1051522) rmt: RMT translator buffer create fail
+E (1051522) rmt: rmt_write_sample(1263): RMT translator not init
+E (1051872) rmt: RMT translator buffer create fail
+E (1051872) rmt: rmt_write_sample(1263): RMT translator not init
+E (1053222) rmt: RMT translator buffer create fail
+E (1053222) rmt: rmt_write_sample(1263): RMT translator not init
+E (1053672) rmt: RMT translator buffer create fail
+E (1053672) rmt: rmt_write_sample(1263): RMT translator not init
+E (1053722) rmt: RMT translator buffer create fail
+E (1053722) rmt: rmt_write_sample(1263): RMT translator not init
+[1054634][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1058050][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1061437][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1064827][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1068215][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1071609][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1073489) rmt: RMT translator buffer create fail
+E (1073489) rmt: rmt_write_sample(1263): RMT translator not init
+E (1073539) rmt: RMT translator buffer create fail
+E (1073539) rmt: rmt_write_sample(1263): RMT translator not init
+E (1073739) rmt: RMT translator buffer create fail
+E (1073739) rmt: rmt_write_sample(1263): RMT translator not init
+E (1073989) rmt: RMT translator buffer create fail
+E (1073989) rmt: rmt_write_sample(1263): RMT translator not init
+E (1074089) rmt: RMT translator buffer create fail
+E (1074089) rmt: rmt_write_sample(1263): RMT translator not init
+[1074998][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1078387][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1081776][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1085167][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1088555][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1091943][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1095333][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1098722][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1102110][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1105500][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1108890][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1112283][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1115671][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1119059][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1122448][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1125838][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1129226][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1132614][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1136005][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1135522) rmt: RMT translator buffer create fail
+E (1135523) rmt: rmt_write_sample(1263): RMT translator not init
+E (1135530) rmt: RMT translator buffer create fail
+E (1135532) rmt: rmt_write_sample(1263): RMT translator not init
+[1139392][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1142782][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1142303) rmt: RMT translator buffer create fail
+E (1142304) rmt: rmt_write_sample(1263): RMT translator not init
+E (1142307) rmt: RMT translator buffer create fail
+E (1142310) rmt: rmt_write_sample(1263): RMT translator not init
+[1146173][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+[1149561][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1149085) rmt: RMT translator buffer create fail
+E (1149088) rmt: rmt_write_sample(1263): RMT translator not init
+[1152972][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1152492) rmt: RMT translator buffer create fail
+E (1152493) rmt: rmt_write_sample(1263): RMT translator not init
+E (1152498) rmt: RMT translator buffer create fail
+E (1152500) rmt: rmt_write_sample(1263): RMT translator not init
+[1156363][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1155883) rmt: RMT translator buffer create fail
+E (1155883) rmt: rmt_write_sample(1263): RMT translator not init
+E (1155887) rmt: RMT translator buffer create fail
+E (1155890) rmt: rmt_write_sample(1263): RMT translator not init
+[1159751][W][WiFiGeneric.cpp:1057] _eventCallback(): Reason: 201 - NO_AP_FOUND
+E (1159270) rmt: RMT translator buffer create fail
+E (1159271) rmt: rmt_write_sample(1263): RMT translator not init
+E (1159276) rmt: RMT translator buffer create fail
+E (1159278) rmt: rmt_write_sample(1263): RMT translator not init
+
+abort() was called at PC 0x4214316f on core 0
+
+
+Backtrace: 0x40377eea:0x3fce11c0 0x403801b1:0x3fce11e0 0x403867b1:0x3fce1200 0x4214316f:0x3fce1280 0x421431b6:0x3fce12a0 0x421311c9:0x3fce12c0 0x42131000:0x3fce12e0 0x42132ebd:0x3fce1300 0x4213303c:0x3fce1320 0x42133501:0x3fce1360 0x4213357a:0x3fce1380 0x4213358d:0x3fce13a0 0x42154d57:0x3fce13c0 0x42019565:0x3fce1460 0x42157311:0x3fce14b0 0x4215a852:0x3fce14f0 0x4215f6a9:0x3fce1560 0x4215f555:0x3fce15a0 0x4215f929:0x3fce15c0 0x4215e2c9:0x3fce15e0 0x4037e586:0x3fce1600 0x42155ca2:0x3fce1620
+
+
+
+
+ELF file SHA256: ecd75a008becf3de
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40377af8
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x44c
+load:0x403c9700,len:0xbe4
+load:0x403cc700,len:0x2a68
+entry 0x403c98d4
+[  1011][I][display.cpp:10] TaskLvglUpdate(): Running on Core: 1
+
+[  1052][I][system.cpp:74] log_system(): init audio...
+[  1555][I][system.cpp:74] log_system(): init system...
+[  1559][I][system.cpp:49] system_init(): start with calibration false
+[  1560][I][system.cpp:74] log_system(): init network...
+[  3046][I][network.cpp:80] network_init(): 网络连接成功！
+[  3046][I][system.cpp:74] log_system(): ota check...
+[  3055][I][ota.cpp:302] CheckVersion(): [Ota] Current version: 0.3.2
+[  3066][I][ota.cpp:321] CheckVersion(): user agent D-BOT-V1.0/0.3.2
+[  3412][W][ota.cpp:290] ParseVersionRsp(): [Ota] No firmware section found!
+[  3413][I][system.cpp:74] log_system(): init mpu...
+[  3429][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=39 scl=38 freq=1000000
+[  3607][I][imu.cpp:227] imu_init(): BMI270 connected!
+[  3616][I][imu.cpp:58] kalman_init(): BMI270 pitch: -0.00
+[  3616][I][system.cpp:74] log_system(): init motor...
+[  3635][I][motor.cpp:811] motor_init(): Motor starting...
+[  3636][E][esp32-hal-spi.c:247] spiAttachMOSI(): HSPI Does not have default pins on ESP32S2!
+[  4743][E][esp32-hal-cpu.c:110] addApbChangeCallback(): duplicate func=0x4205a068 arg=0x3fc98bb8
+[  4743][E][esp32-hal-spi.c:247] spiAttachMOSI(): HSPI Does not have default pins on ESP32S2!
+[  5955][I][motor.cpp:826] motor_init(): [motor]: set offset 2.855887, 0.249655
+[  5956][I][motor.cpp:790] motor_initFOC(): has a offset value 2.86.
+[  6958][I][motor.cpp:790] motor_initFOC(): has a offset value 0.25.
+[  7959][I][motor.cpp:842] motor_init(): Motor ready.
+[  7970][I][main.cpp:15] dbot_init(): init comm...
+[  7971][I][udp_comm.cpp:15] Init(): WiFi already connected. Starting UDP on port 6090...
+[  7972][I][main.cpp:19] dbot_init(): init dbot...
+[  7976][I][main.cpp:27] dbot_init(): init controller...
+[  7982][I][main.cpp:32] dbot_init(): get ble addr 04:0A:11:11:90:10
+[  7998][I][main.cpp:63] setup(): init App...
+[ 14620][I][motor.cpp:679] motor_task_mode_update(): pitch: -15 mode from 0 change to 2
+Exception in thread rx:
+Traceback (most recent call last):
+  File "/home/doer/miniconda3/envs/py-xiaozhi/lib/python3.10/site-packages/serial/tools/miniterm.py", line 499, in reader
+    data = self.serial.read(self.serial.in_waiting or 1)
+  File "/home/doer/miniconda3/envs/py-xiaozhi/lib/python3.10/site-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/doer/miniconda3/envs/py-xiaozhi/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/doer/miniconda3/envs/py-xiaozhi/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/doer/miniconda3/envs/py-xiaozhi/lib/python3.10/site-packages/serial/tools/miniterm.py", line 510, in reader
+    self.console.cancel()
+  File "/home/doer/miniconda3/envs/py-xiaozhi/lib/python3.10/site-packages/serial/tools/miniterm.py", line 219, in cancel
+    fcntl.ioctl(self.fd, termios.TIOCSTI, b'\0')
+OSError: [Errno 5] Input/output error
+
+

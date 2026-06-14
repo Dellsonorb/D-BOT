@@ -1,0 +1,59 @@
+sequenceDiagram
+    participant PC as PC (DBotClient)
+    participant ESP as D-BOT (ESP32)
+
+    Note over PC, ESP: ACK 三阶段闭环流程
+
+    rect rgb(232, 245, 233)
+        Note right of PC: 命令发送
+        PC->>PC: 生成 cmd_id
+        PC->>PC: 创建 Future 注册到 pending_cmds
+        PC->>ESP: UDP 指令 (cmd_id, MOVE, target=10, expect_ack=true)
+    end
+
+    rect rgb(227, 242, 253)
+        Note right of PC: 阶段 1 received
+        ESP->>ESP: handleMessage 解析 JSON
+        ESP->>ESP: 验证 action 合法
+        ESP-->>PC: ACK stage=received status=success
+        PC->>PC: Future 未完成 继续等待
+    end
+
+    rect rgb(255, 243, 224)
+        Note right of PC: 阶段 2 started
+        ESP->>ESP: runCommandCycle 从队列取出命令
+        ESP->>ESP: PID 控制器初始化
+        ESP-->>PC: ACK stage=started status=success
+        PC->>PC: Future 未完成 继续等待
+    end
+
+    rect rgb(232, 245, 233)
+        Note right of PC: 命令执行中
+        ESP->>ESP: cmdExe PID 循环控制电机
+        ESP->>ESP: 检测 stop_flag 是否被中断
+    end
+
+    rect rgb(227, 242, 253)
+        Note right of PC: 阶段 3 completed
+        ESP->>ESP: 目标到达 cmd.status = COMPLETED
+        ESP-->>PC: ACK stage=completed status=success
+        PC->>PC: Future.set_result 终态
+    end
+
+    PC->>PC: 返回执行结果 更新 Thing 属性
+
+    Note over PC, ESP: STOP 中断场景
+
+    rect rgb(252, 228, 236)
+        Note right of PC: STOP 中断
+        PC->>ESP: UDP STOP 指令 (expect_ack=true)
+        ESP-->>PC: ACK stage=received
+        ESP->>ESP: commandQueue.clear 清空队列
+        ESP->>ESP: stop_flag = true
+        ESP->>ESP: motor_set_speed(0, 0) 立即停机
+        ESP-->>PC: ACK stage=completed
+        Note right of ESP: 正在执行的 MOVE 被中断
+        ESP->>ESP: checkAndClearStop 返回 true
+        ESP->>ESP: cmd.status = FAILED
+        ESP-->>PC: ACK stage=failed message=stopped
+    end
