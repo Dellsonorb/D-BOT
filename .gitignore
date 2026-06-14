@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Cache
+cache/
+__pycache__/
+
+# Claude AI settings
+.claude/
+
+# Large binary models (download separately)
+models/*.onnx
+
+# Build artifacts
+*.o
+*.elf
+*.bin
+*.hex

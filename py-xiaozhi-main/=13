@@ -1,0 +1,30 @@
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Solving environment: - \ done
+
+## Package Plan ##
+
+  environment location: /home/doer/miniconda3/envs/py-xiaozhi
+
+  added / updated specs:
+    - libgcc-ng
+    - libstdcxx-ng
+    - pyqt=5.15
+
+
+The following NEW packages will be INSTALLED:
+
+  packaging          conda-forge/noarch::packaging-26.1-pyhc364b38_0 
+  pyqt               conda-forge/linux-64::pyqt-5.15.11-py310h046fae5_2 
+  pyqt5-sip          conda-forge/linux-64::pyqt5-sip-12.17.0-py310hea6c23e_2 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: / done
+Verifying transaction: \ done
+Executing transaction: / - \ | / done

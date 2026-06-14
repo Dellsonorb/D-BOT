@@ -1,0 +1,14 @@
+ip addr
+sudo arp-scan --localnet
+ping 192.168.1.106（填你要测试的ip）
+或者去config中修改ip.
+
+
+PYTHONPATH=. python scripts/test_dbot_thing.py --ping
+PYTHONPATH=. python scripts/test_dbot_thing.py --descriptors
+PYTHONPATH=. python scripts/test_dbot_thing.py --states
+PYTHONPATH=. python scripts/test_dbot_thing.py --forward 20
+PYTHONPATH=. python scripts/test_dbot_thing.py --left 90
+PYTHONPATH=. python scripts/test_dbot_thing.py --stop
+PYTHONPATH=. python scripts/test_dbot_thing.py --set-ip 192.168.1.200
+PYTHONPATH=. python scripts/test_dbot_thing.py --ping -v  （带调试日志）

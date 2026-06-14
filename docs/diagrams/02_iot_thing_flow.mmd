@@ -1,0 +1,46 @@
+sequenceDiagram
+    participant User as 用户 (语音/GUI)
+    participant App as Application
+    participant IoT as IoT Plugin
+    participant TM as ThingManager
+    participant Thing as DBotThing
+    participant Client as DBotClient
+    participant Bot as D-BOT (ESP32)
+
+    Note over User, Bot: 阶段 1: IoT 设备注册
+    App->>IoT: on_protocol_connected()
+    IoT->>TM: initialize_iot_devices(config)
+    TM->>Thing: new DBotThing(config)
+    Thing->>Client: new DBotClient(host, port, ack配置)
+    IoT->>TM: get_descriptors_json()
+    TM-->>IoT: 设备描述符 18 属性 + 16+ 方法
+    IoT->>App: send_iot_descriptors(json)
+    App->>App: 发送到小智云端
+
+    Note over User, Bot: 阶段 2: 语音指令执行
+    User->>App: "向前走"
+    App->>App: 语音识别 → AI 理解意图
+    App->>IoT: on_incoming_json(IoT指令)
+    IoT->>TM: invoke({name:"DBot", method:"MoveForward", params})
+    TM->>Thing: invoke(command)
+    Thing->>Thing: _execute_motion("MoveForward", "MOVE", target)
+    Thing->>Client: send_action("MOVE", target)
+
+    Note over Client, Bot: 阶段 3: UDP 通信 + ACK
+    Client->>Client: _ensure_ack_listener()
+    Client->>Bot: UDP {cmd_id, action:"MOVE", target, expect_ack:true}
+    Bot-->>Client: ACK {stage:"received"}
+    Client->>Client: 更新 Future (非终态，继续等待)
+    Bot-->>Client: ACK {stage:"started"}
+    Client->>Client: 更新 Future (非终态，继续等待)
+    Bot-->>Client: ACK {stage:"completed", status:"success"}
+    Client->>Client: Future.set_result(ack)
+
+    Note over User, Bot: 阶段 4: 结果返回
+    Client-->>Thing: {success:true, stage:"completed"}
+    Thing->>Thing: 更新属性 (robot_status, last_result, ack_stage)
+    Thing-->>TM: {status:"success", message:"已完成"}
+    TM-->>IoT: 执行结果
+    IoT->>IoT: get_states_json(delta=true)
+    IoT->>App: send_iot_states(delta_states)
+    App->>App: 发送状态到云端 + 更新 GUI

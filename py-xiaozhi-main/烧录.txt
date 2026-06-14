@@ -1,0 +1,12 @@
+ls /dev/ttyUSB* /dev/ttyACM*
+sudo chmod 666 /dev/ttyACM0
+esptool --chip esp32s3 --port /dev/ttyACM0 erase-flash
+esptool --chip esp32s3 --port /dev/ttyACM0 --baud 921600 write_flash -z 0x0 D-BOT-v0.3.2-HW-V1.0.bin
+
+
+
+
+查看串口日志：
+python -m serial.tools.miniterm /dev/ttyACM0 115200
+或者
+screen /dev/ttyACM0 115200
